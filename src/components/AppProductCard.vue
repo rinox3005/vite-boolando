@@ -32,4 +32,88 @@ export default {
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.brand {
+  font-size: 13px;
+}
+
+.price {
+  font-size: 14px;
+}
+
+.red-text {
+  color: red;
+  margin-right: 4px;
+}
+
+.hover-img {
+  display: none;
+}
+
+.content:hover .hover-img {
+  display: inline-block;
+}
+
+.content:hover .main-img {
+  display: none;
+}
+
+.heart:hover {
+  color: red;
+  cursor: pointer;
+}
+.line-through {
+  text-decoration: line-through;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.discount {
+  background-color: red;
+  padding: 5px 8px;
+  color: white;
+  font-size: 11px;
+  margin-right: 5px;
+}
+
+.sustainability {
+  background-color: green;
+  padding: 5px 8px;
+  color: white;
+  font-size: 11px;
+}
+
+.product {
+  font-size: 13px;
+}
+
+.content {
+  position: relative;
+}
+
+.content img {
+  width: 100%;
+}
+
+.label {
+  position: absolute;
+  bottom: 40px;
+  left: 0px;
+}
+
+.heart {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  text-align: center;
+  padding: 1px 11px;
+  background-color: white;
+  font-size: 30px;
+}
+</style>

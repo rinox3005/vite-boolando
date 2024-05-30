@@ -86,4 +86,24 @@ export default {
   </main>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+main {
+  padding-top: 110px;
+  padding-bottom: 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-33 {
+  width: calc(100% / 3 - 40px);
+  margin: 20px;
+}
+</style>

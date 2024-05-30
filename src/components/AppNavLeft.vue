@@ -5,17 +5,30 @@ export default {
 </script>
 
 <template>
-  <ul class="unstyled-list">
-    <li class="bold">
+  <ul>
+    <li>
       <a href="#">Donna</a>
     </li>
-    <li class="bold">
+    <li>
       <a href="#">Uomo</a>
     </li>
-    <li class="bold">
+    <li>
       <a href="#">Bambini</a>
     </li>
   </ul>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+ul {
+  list-style-type: none;
+  li {
+    display: inline-block;
+    font-weight: bold;
+    a {
+      color: white;
+      text-decoration: none;
+      padding-right: 10px;
+    }
+  }
+}
+</style>

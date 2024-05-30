@@ -11,12 +11,25 @@ export default {
 </script>
 
 <template>
-  <footer class="foot">
-    <div class="row container justify-between">
+  <footer>
+    <div class="container">
       <AppFootLeft />
       <AppFootSocials />
     </div>
   </footer>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+footer {
+  width: 100%;
+  background-color: #1a1a1a;
+  padding: 30px 100px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+</style>

@@ -14,12 +14,34 @@ export default {
 
 <template>
   <header>
-    <div class="row container">
-      <div class="row col-33 align-center"><AppNavLeft /></div>
-      <div class="row col-33 justify-center"><AppNavLogo /></div>
-      <div class="row col-33 justify-end align-center"><AppNavRight /></div>
+    <div class="container">
+      <div><AppNavLeft /></div>
+      <div class="justify-center"><AppNavLogo /></div>
+      <div class="justify-end"><AppNavRight /></div>
     </div>
   </header>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+header {
+  position: fixed;
+  background-color: #ff6900;
+  box-shadow: 0 2px rgba(158, 157, 157, 0.63);
+  width: 100%;
+  z-index: 1;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(33.3333333333% - 40px);
+    margin: 20px;
+    align-content: center;
+  }
+}
+</style>

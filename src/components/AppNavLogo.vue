@@ -8,4 +8,10 @@ export default {
   <a href="#"><img class="logo" src="/img/boolean-logo.png" alt="logo" /></a>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+a {
+  img {
+    height: 25px;
+  }
+}
+</style>
