@@ -38,12 +38,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import "/src/assets/styles/partials/variables";
 .white {
   color: white;
 }
 img {
+  @extend %white-icons;
   height: 14px;
-  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
-    hue-rotate(275deg) brightness(105%) contrast(106%);
 }
 </style>

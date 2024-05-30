@@ -90,7 +90,7 @@ export default {
 @import "/src/assets/styles/partials/variables";
 
 main {
-  padding-top: 110px;
+  padding-top: 100px;
   padding-bottom: 40px;
 }
 

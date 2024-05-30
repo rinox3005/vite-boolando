@@ -1,19 +1,31 @@
 <script>
 export default {
   name: "AppNavLeft",
+  data() {
+    return {
+      menu: [
+        {
+          name: "Donna",
+          link: "#",
+        },
+        {
+          name: "Uomo",
+          link: "#",
+        },
+        {
+          name: "Bambini",
+          link: "#",
+        },
+      ],
+    };
+  },
 };
 </script>
 
 <template>
   <ul>
-    <li>
-      <a href="#">Donna</a>
-    </li>
-    <li>
-      <a href="#">Uomo</a>
-    </li>
-    <li>
-      <a href="#">Bambini</a>
+    <li v-for="item in menu">
+      <a :href="item.link">{{ item.name }}</a>
     </li>
   </ul>
 </template>

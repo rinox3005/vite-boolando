@@ -22,3 +22,8 @@ $bg-eco-color: green;
 %col {
   width: calc(33.3333333333% - 40px);
 }
+
+%white-icons {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+    hue-rotate(275deg) brightness(105%) contrast(106%);
+}

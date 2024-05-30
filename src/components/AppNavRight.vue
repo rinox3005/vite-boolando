@@ -1,22 +1,44 @@
 <script>
 export default {
   name: "AppNavRight",
+  data() {
+    return {
+      userMenu: [
+        {
+          name: "user",
+          link: "#",
+          img: "/img/user.webp",
+        },
+        {
+          name: "favourites",
+          link: "#",
+          img: "/img/heart.webp",
+        },
+        {
+          name: "shop",
+          link: "#",
+          img: "/img/shopping-bag.webp",
+        },
+      ],
+    };
+  },
 };
 </script>
 
 <template>
-  <a href="#"><img src="/img/user.webp" alt="user" /></a>
-  <a href="#"><img src="/img/heart.webp" alt="favourites" /></a>
-  <a href="#"><img src="/img/shopping-bag.webp" alt="shop" /></a>
+  <div v-for="item in userMenu">
+    <a :href="item.link"><img :src="item.img" :alt="item.name" /></a>
+  </div>
 </template>
 
 <style lang="scss" scoped>
+@import "/src/assets/styles/partials/variables";
+
 a {
   img {
+    @extend %white-icons;
     height: 18px;
     padding-left: 8px;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
-      hue-rotate(275deg) brightness(105%) contrast(106%);
   }
 }
 </style>
