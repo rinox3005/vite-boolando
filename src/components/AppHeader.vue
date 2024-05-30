@@ -23,9 +23,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import "/src/assets/styles/partials/variables";
+
 header {
   position: fixed;
-  background-color: #ff6900;
+  background-color: $bg-header;
   box-shadow: 0 2px rgba(158, 157, 157, 0.63);
   width: 100%;
   z-index: 1;

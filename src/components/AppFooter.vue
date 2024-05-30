@@ -20,9 +20,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import "/src/assets/styles/partials/variables";
+
 footer {
   width: 100%;
-  background-color: #1a1a1a;
+  background-color: $bg-footer;
   padding: 30px 100px;
 }
 .container {
