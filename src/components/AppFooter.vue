@@ -28,10 +28,7 @@ footer {
   padding: 30px 100px;
 }
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
+  @extend %container, %flex;
   justify-content: space-between;
 }
 </style>

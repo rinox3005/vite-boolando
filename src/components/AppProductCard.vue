@@ -33,6 +33,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import "/src/assets/styles/partials/variables";
+
 .brand {
   font-size: 13px;
 }
@@ -42,7 +44,7 @@ export default {
 }
 
 .red-text {
-  color: red;
+  color: $price-color;
   margin-right: 4px;
 }
 
@@ -59,23 +61,12 @@ export default {
 }
 
 .heart:hover {
-  color: red;
+  color: $heart-color;
   cursor: pointer;
-}
-.line-through {
-  text-decoration: line-through;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.bold {
-  font-weight: bold;
 }
 
 .discount {
-  background-color: red;
+  background-color: $bg-discount-color;
   padding: 5px 8px;
   color: white;
   font-size: 11px;
@@ -83,7 +74,7 @@ export default {
 }
 
 .sustainability {
-  background-color: green;
+  background-color: $bg-eco-color;
   padding: 5px 8px;
   color: white;
   font-size: 11px;

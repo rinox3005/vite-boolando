@@ -33,15 +33,11 @@ header {
   z-index: 1;
 }
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
+  @extend %container, %flex;
 
   div {
-    display: flex;
-    flex-wrap: wrap;
-    width: calc(33.3333333333% - 40px);
+    @extend %flex;
+    @extend %col;
     margin: 20px;
     align-content: center;
   }

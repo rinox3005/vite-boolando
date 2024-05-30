@@ -87,23 +87,23 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import "/src/assets/styles/partials/variables";
+
 main {
   padding-top: 110px;
   padding-bottom: 40px;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
+  @extend %container;
 }
 
 .row {
-  display: flex;
-  flex-wrap: wrap;
+  @extend %flex;
 }
 
 .col-33 {
-  width: calc(100% / 3 - 40px);
+  @extend %col;
   margin: 20px;
 }
 </style>
