@@ -7,6 +7,15 @@ export default {
       required: true,
     },
   },
+  methods: {
+    switchFavourites() {
+      if (this.product.isInFavorites) {
+        return (this.product.isInFavorites = false);
+      } else {
+        return (this.product.isInFavorites = true);
+      }
+    },
+  },
 };
 </script>
 
@@ -22,7 +31,16 @@ export default {
       :src="`/img/${product.backImage}`"
       :alt="product.name"
     />
-    <div class="heart">&hearts;</div>
+    <div
+      class="heart"
+      :class="[
+        { fav: product.isInFavorites },
+        { notFav: !product.isInFavorites },
+      ]"
+      @click="switchFavourites()"
+    >
+      &hearts;
+    </div>
     <div class="label">
       <span
         class="discount bold"
@@ -74,11 +92,6 @@ export default {
   display: none;
 }
 
-.heart:hover {
-  color: $heart-color;
-  cursor: pointer;
-}
-
 .discount {
   background-color: $bg-discount-color;
   padding: 5px 8px;
@@ -120,5 +133,21 @@ export default {
   padding: 1px 11px;
   background-color: white;
   font-size: 30px;
+}
+
+.fav {
+  color: red;
+  cursor: pointer;
+  &:hover {
+    color: black;
+  }
+}
+
+.notFav {
+  color: black;
+  cursor: pointer;
+  &:hover {
+    color: red;
+  }
 }
 </style>
