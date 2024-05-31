@@ -12,16 +12,30 @@ export default {
 
 <template>
   <div class="content">
-    <img class="main-img" :src="product.image" :alt="product.name" />
-    <img class="hover-img" :src="product.alternativeImg" :alt="product.name" />
+    <img
+      class="main-img"
+      :src="`/img/${product.frontImage}`"
+      :alt="product.name"
+    />
+    <img
+      class="hover-img"
+      :src="`/img/${product.backImage}`"
+      :alt="product.name"
+    />
     <div class="heart">&hearts;</div>
     <div class="label">
-      <span class="discount bold" v-show="product.discount">{{
-        product.discount
-      }}</span>
-      <span class="sustainability bold" v-show="product.eco">{{
-        product.eco
-      }}</span>
+      <span
+        class="discount bold"
+        v-for="badge in product.badges"
+        v-show="badge.type === 'discount'"
+        >{{ badge.value }}</span
+      >
+      <span
+        class="sustainability bold"
+        v-for="badge in product.badges"
+        v-show="badge.type === 'tag'"
+        >{{ badge.value }}</span
+      >
     </div>
   </div>
   <div class="brand">{{ product.brand }}</div>
