@@ -42,7 +42,7 @@ export default {
   <div class="product uppercase bold">{{ product.name }}</div>
   <div class="price">
     <span class="red-text bold">{{ product.price }}</span>
-    <span class="line-through">{{ product.previousPrice }}</span>
+    <span class="line-through">{{ product.discount }}</span>
   </div>
 </template>
 
