@@ -5,8 +5,8 @@ export default {
 </script>
 
 <template>
-  <div>
-    <div class="mb-10 bold white pr-20 font-size-12">Trovaci anche su</div>
+  <div class="socials">
+    <div class="mb-10 bold white font-size-15">Trovaci anche su</div>
     <div>
       <img
         class="icons-footer pr-5"
@@ -44,6 +44,10 @@ export default {
 }
 img {
   @extend %white-icons;
-  height: 14px;
+  height: 18px;
+}
+
+.socials {
+  text-align: center;
 }
 </style>

@@ -24,6 +24,7 @@ export default {
 
 <template>
   <nav>
+    <div class="burger"><i class="fa fa-bars"></i></div>
     <ul>
       <li v-for="item in menu">
         <a :href="item.link">{{ item.name }}</a>
@@ -44,6 +45,24 @@ ul {
       padding-right: 10px;
       display: inline-block;
     }
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .burger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  ul {
+    display: none;
+  }
+  .burger {
+    display: block;
+    font-size: 25px;
+    color: #ffffff;
+    cursor: pointer;
   }
 }
 </style>

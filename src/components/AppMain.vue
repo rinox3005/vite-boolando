@@ -18,7 +18,7 @@ export default {
   <main>
     <div class="container">
       <div class="row">
-        <div class="col-33" v-for="product in products.products">
+        <div class="col" v-for="product in products.products">
           <AppProductCard :product="product" />
         </div>
       </div>
@@ -30,7 +30,7 @@ export default {
 @use "/src/assets/styles/partials/variables" as *;
 
 main {
-  padding-top: 100px;
+  padding-top: 90px;
   padding-bottom: 40px;
 }
 
@@ -42,8 +42,20 @@ main {
   @extend %flex;
 }
 
-.col-33 {
+.col {
   @extend %col;
   margin: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .col {
+    width: calc((100% / 2) - 40px);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .col {
+    width: 100%;
+  }
 }
 </style>

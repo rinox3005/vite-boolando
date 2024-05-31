@@ -25,10 +25,23 @@ export default {
 footer {
   width: 100%;
   background-color: $bg-footer;
-  padding: 30px 100px;
+  padding: 40px 0;
 }
 .container {
   @extend %container, %flex;
   justify-content: space-between;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .col {
+    width: 100%;
+  }
 }
 </style>
