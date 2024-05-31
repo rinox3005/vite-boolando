@@ -11,6 +11,9 @@ body {
 }
 
 /* UTILITY */
+[v-cloak] {
+  display: none;
+}
 
 .align-center {
   align-content: center;

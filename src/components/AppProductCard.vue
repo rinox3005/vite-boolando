@@ -33,7 +33,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import "/src/assets/styles/partials/variables";
+@use "/src/assets/styles/partials/variables" as *;
 
 .brand {
   font-size: 13px;
